@@ -1,0 +1,187 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #3f3f3f;
+}
+header{
+    text-align: center;
+    background-color: #2A2A2A;
+    padding: 20px;
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+h1{
+    color: #d9d7d4;
+    text-align: center;
+}
+nav{
+    background-color: #ee424b;
+    height: 30px;
+    text-align: center;
+}
+.a-nav{
+    line-height: 30px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    background-color: #ff0f43;
+    color: #d9d7d4;
+    border-width: 1px;
+    border-color: #7e0721;
+    border-style: ridge;
+}
+.a-nav:hover{
+    text-decoration: underline;
+    padding-left: 45px;
+    padding-right: 45px;
+    outline-style: outset;
+    outline-color: #c20b32;
+}
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+article{
+    color: #d9d7d4;
+    align-self: center;
+    width: 860px;
+    height: auto;
+    padding: 7.5px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #645d5d;
+}
+h2 {
+    text-align: center;
+}
+p {
+    width: 800px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    text-align: center;
+    height: 20px;
+    background-color: #ee424b;
+    margin-top: auto;
+}
+
+.feedback{
+    color: #d9d7d4;
+    align-self: center;
+    width: 860px;
+    height: auto;
+    padding: 7.5px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #645d5d;
+}
+
+form{
+    text-align: justify;
+}
+
+label{
+    margin: 5px;
+}
+input{
+    align-self: center;
+    margin: 5px;
+}
+
+select{
+    align-self: center;
+    margin: 5px;
+    width: 168px;
+    height: 24px;
+}
+
+fieldset{
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shortText{
+    width: 160px;
+    height: 16px;
+}
+
+.topField0{
+    display: flex;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fieldName{
+    width: 180px;
+    float: left;
+}
+
+.field{
+    width: 160px;
+    float: right;
+}
+
+.label0 {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.feedbackText{
+    float: left;
+    margin-right: 10px;
+    margin-top: 23px;
+    margin-bottom: 15px;
+}
+
+.feedbackField{
+    margin-top: 10px;
+    width: 160px;
+    height: 240px;
+    margin-left: 30px;
+    float: left;
+}
+
+.emailBack{
+    width: 280px;
+    height: 20px;
+    margin: 5px;
+    padding-top: 20px;
+    padding-left: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sendDiv{
+    width: 160px;
+    height: 20px;
+    margin-left: 150px;
+
+}
+.send{
+    width: 160px;
+    height: 20px;
+}
+
+.terms{
+    width: 280px;
+    height: 20px;
+    margin: 5px;
+    padding-left: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
