@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Create an account on My Sinister Blog">
+        <title>Sign Up - My Sinister Blog</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mobile.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/darth-vader.jpg" alt="Darth Vader header background" width="150" height="150">
+            <h1>My Sinister Blog</h1>
+        </header>
+
+        <nav class="topNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="search.html">Search</a>
+        </nav>
+
+        <main>
+            <section class="form-container">
+                <h1>Sign Up</h1>
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" id="login" name="login" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bday">Date of Birth</label>
+                        <input type="date" id="bday" name="bday" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree with Terms & Conditions</label>
+                    </div>
+
+                    <button type="submit" class="btn">Create Account</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            &copy; K105 KhAI
+            <nav aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="signin.html">Sign in</a>
+                <a href="signup.html">Sign up</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="search.html">Search</a>
+            </nav>
+        </footer>
+    </body>
+</html>
