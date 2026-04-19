@@ -1,0 +1,151 @@
+<html>
+
+    <head>
+        <title>Blog admin panel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+
+
+    
+    <body>
+
+
+        <!--Header-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Blog Admin Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feedbacks</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Breadcrumb-->
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Posts</a></li>
+                    <li class="breadcrumb-item active" aria-current="page""><a href="#">New post</a></li>
+                </ol>
+            </nav>
+        </div>
+
+
+        <!--Form body-->
+        <form style="padding-left: 15%;">
+            <div class="form-group row">
+                <label for="newPostTitle" class="col-sm-2 col-form-label text-left" style="padding: 0 0 0 8%;">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="newPostTitle" aria-describedby="newPostTitle" placeholder="Title">
+                </div>
+
+                <label for="newPostText" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Text</label>
+                <div class="col-sm-10" style="margin-top: 10px;">
+                    <textarea class="form-control" id=newPostText" rows="3" placeholder="Text"></textarea>
+                </div>
+
+                <label for="newPostCategories" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Categories</label>
+                <fieldset class="form-group col-sm-10" id="newPostCategories">
+                    <div class="column" style="margin-top: 10px;">
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Science
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Poetry
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Art
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <label for="newPostLanguage" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Language</label>
+                <div class="col-sm-10" style="margin-top: 10px;">
+                    <select id="newPostLanguage" class="custom-select custom-select-sm-2">
+                        <option selected>English</option>
+                        <option value="1">Ukrainian</option>
+                        <option value="2">German</option>
+                    </select>
+                </div>
+                
+                <label for="newPostImage" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Image</label>
+                <div class="col-sm-10" style="margin-top: 10px;">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <label for="newPostTheme" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Theme</label>
+                <div class="form-check form-switch col-sm-10" style="padding: 10px 0 0 34px;">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Turn to the Dark side</label>
+                </div>
+
+                <label for="newPostPublish" class="col-sm-2 col-form-label text-left" style="padding: 10px 0 0 8%;">Publish</label>
+                <div class="form-check form-switch col-sm-10" style="padding: 10px 0 0 34px;">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Visibility</label>
+                </div>
+                <div class="col-sm-2">
+                    <div style="padding: 20px 0 0 47%;">
+                        <a href="new_post.html" class="btn btn-success mb-2" data-toggle="modal" data-target="#askCreatePost">New Post</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+
+
+
+    <div class="modal fade" id="askCreatePost" tabindex="-1" role="dialog" aria-labelledby="askCreatePost" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="askCreatePost">Create post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you really want to Create this post?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    </body>
+</html>

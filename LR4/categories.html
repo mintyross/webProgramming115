@@ -1,0 +1,197 @@
+<html>
+
+    <head>
+        <title>Categories</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+    </head>
+
+
+    
+    <body>
+        
+
+        <!--Header-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Categories</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Posts</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feedbacks</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Breadcrumb-->
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page""><a href="#">Categories</a></li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="alert alert-primary" role="alert" id="Alert001" style="display: none;">
+            Embrace yourself, articles are coming up!
+        </div>
+
+
+        <!--Cards-->
+        <div class="cards-row d-flex flex-row flex-wrap gap-3 p-3">
+            <div class="card" style="width: 18rem; margin: 10px">
+                <img src="images/science.jpg" class="card-img-top" alt="science">
+                <div class="card-body">
+                    <h5 class="card-title">Science</h5>
+                    <p class="card-text text-truncate">Discover the wonders of modern science</p>
+                    <button class="btn btn-primary m-3" onclick="showNotification1()">Read</button>
+
+                    <div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+                        <div id="myToast1" class="toast" role="alert">
+                            <div class="toast-header bg-primary text-white">
+                                <strong class="me-auto" style="padding-right: 67%;">Wait</strong>
+                                
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+
+                            </div>
+                            <div class="toast-body">
+                                We are preparing your articles
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; margin: 10px">
+                <img src="images/poetry.jpg" class="card-img-top" alt="science">
+                <div class="card-body">
+                    <h5 class="card-title">Poems</h5>
+                    <p class="card-text text-truncate">Make your soul talk with rhimes</p>
+                    <button class="btn btn-primary m-3" onclick="showNotification2()">Read</button>
+
+                    <div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+                        <div id="myToast2" class="toast" role="alert">
+                            <div class="toast-header bg-primary text-white">
+                                <strong class="me-auto" style="padding-right: 67%;">Wait</strong>
+                                
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+
+                            </div>
+                            <div class="toast-body">
+                                We are preparing your articles
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; margin: 10px">
+                <img src="images/art.jpg" class="card-img-top" alt="science">
+                <div class="card-body">
+                    <h5 class="card-title">Art</h5>
+                    <p class="card-text text-truncate">Take a thoughtful look into these masterpieces</p>
+                    <button class="btn btn-primary m-3" onclick="showNotification3()">Read</button>
+
+                    <div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+                        <div id="myToast3" class="toast" role="alert">
+                            <div class="toast-header bg-primary text-white">
+                                <strong class="me-auto" style="padding-right: 67%;">Wait</strong>
+                                
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+
+                            </div>
+                            <div class="toast-body">
+                                We are preparing your articles
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showNotification1() {
+                const toastEl = document.getElementById('myToast1');
+                const alert = document.getElementById('Alert001');
+                if (!toastEl || !alert) return;
+
+                const toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+                toast.show();
+
+                setTimeout(() => {
+                    alert.style.display = 'block';
+
+                    setTimeout(() => {
+                    alert.style.display = 'none';
+                    }, 3000);
+                }, 5000);
+            }
+        </script>
+
+        <script>
+            function showNotification2() {
+                const toastEl = document.getElementById('myToast2');
+                const alert = document.getElementById('Alert001');
+                if (!toastEl || !alert) return;
+
+                const toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+                toast.show();
+
+                setTimeout(() => {
+                    alert.style.display = 'block';
+
+                    setTimeout(() => {
+                    alert.style.display = 'none';
+                    }, 3000);
+                }, 5000);
+            }
+        </script>
+
+                <script>
+            function showNotification3() {
+                const toastEl = document.getElementById('myToast3');
+                const alert = document.getElementById('Alert001');
+                if (!toastEl || !alert) return;
+
+                const toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+                toast.show();
+
+                setTimeout(() => {
+                    alert.style.display = 'block';
+
+                    setTimeout(() => {
+                    alert.style.display = 'none';
+                    }, 3000);
+                }, 5000);
+            }
+        </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+
+    </body>
+</html>
