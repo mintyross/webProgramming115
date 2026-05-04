@@ -1,0 +1,233 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #3f3f3f;
+    color: #d9d7d4;
+
+}
+
+/*
+    HEADER
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a2a2a;
+    height: 60px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: black;
+    padding: 0% 1% 0% 1%;
+}
+
+/*
+    PROFILE AND DROPDOWN MENU
+*/
+
+#logo {
+    background-color: #2a2a2a;
+    color: #d9d7d4;
+    font-size: 2rem;
+    line-height: 60px;
+    width: 260px;
+    text-align: center;
+}
+
+#profile {
+    padding-top: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+#profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+#profile .dropdown {
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: -70px;
+    display: none;
+
+    background-color: #2a2a2a;
+    box-shadow: 0 0 13px 0 #7e0721;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#profile:hover .dropdown{
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: #d9d7d4;
+}
+
+.dropdown .logout {
+    color: #ee424b;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/*
+    LEFT NAVIGATIONAL MENU
+*/
+
+#left-menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+
+    background-color: #2a2a2a;
+
+    border-style: solid;
+    border-width: 1.5px;
+    border-top-width: 0;
+    border-color: black;
+}
+
+#content {  
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-left: 230px;
+}
+
+#left-menu a {
+    display: block;
+    width: 180px;
+    padding-left: 20px;
+    line-height: 40px;
+    color: #d9d7d4;
+    text-decoration: none;
+}
+
+#left-menu a:hover {
+    color: #ee424b;
+    transition: color 0.5s;
+}
+
+/*
+    HORIZONTAL CHART
+*/
+
+.horizontal-bar-chart {
+    padding: 20px;
+    margin-right: 20px;
+    margin: 5px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    color: #d9d7d4;
+}
+
+.horizontal-bar-chart .chart-row {
+    display: flex;
+    width: 500px;
+}
+
+.horizontal-bar-chart .chart-row .value {
+    width: 50%;
+    line-height: 25px;
+}
+
+.horizontal-bar-chart .chart-row .bar {
+    background: repeating-linear-gradient(to right, #645d5d, #645d5d  1px, #3f3f3f 1px, #3f3f3f 50px);
+    padding-bottom: 3px;
+    width: 250px;
+}
+
+.horizontal-bar-chart .chart-row .bar span {
+    display: block;
+    background-color: #ee424b;
+    opacity: 0.8;
+    color: #d9d7d4;
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+.horizontal-bar-chart .chart-row .bar{
+    animation-name: chart-animation;
+    animation-duration: 3s;
+}
+
+@keyframes chart-animation{
+    from {width: 80px;}
+    to {width: 250px;}
+}
+
+/*
+    VERTICAL CHART
+*/
+
+.vertical-bar-chart {
+    display: flex;
+    padding: 20px;
+    margin-right: 20px;
+    margin: 5px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    color: #d9d7d4;
+    flex-direction: row;
+}
+
+.vertical-bar-chart .chart-column {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.vertical-bar-chart .chart-column .value {
+    width: 50%;
+    line-height: 25px;
+}
+
+.vertical-bar-chart .chart-column .bar {
+    background: repeating-linear-gradient(to top, #645d5d, #645d5d  1px, #3f3f3f 1px, #3f3f3f 50px);
+    padding-bottom: 0px;
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.vertical-bar-chart .chart-column .bar span {
+    display: block;
+    background-color: #ee424b;
+    opacity: 0.8;
+    color: #d9d7d4;
+    padding-left: 20px;
+    height: 500px;
+    width: 80px;
+    margin: 5px;
+    align-self: flex-end;
+}
+
+.vertical-bar-chart .chart-column .bar {
+    animation-name: chart-animation-column;
+    animation-duration: 3s;
+}
+
+@keyframes chart-animation-column{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

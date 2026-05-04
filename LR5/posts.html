@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Blog admin panel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Created At</th>
+                </tr>
+            </thead>
+
+            <tbody id="posts">
+                
+            </tbody>
+        </table>
+        <div class="row align-items-center">
+
+            <div class="col-auto">
+                <button class="btn btn-primary" id="sort-button">Sort</button>
+            </div>
+
+            <div class="col-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" id="sort-by-id">#</button>
+                        <button class="dropdown-item" id="sort-by-title">Title</button>
+                        <button class="dropdown-item" id="sort-by-date">Created at</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Order
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <button class="dropdown-item" id="order-asc">Ascending</button>
+                        <button class="dropdown-item" id="order-desc">Descending</button>
+                        <button class="dropdown-item" id="order-abc">Alphabetic</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+
+        
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/posts.js"></script>
+    
+
+    </body>
+</html>
