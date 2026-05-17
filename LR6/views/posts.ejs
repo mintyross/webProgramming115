@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Blog admin panel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container mt-4">
+            <%- include("partials/navbar.ejs") %>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="posts">
+                </tbody>
+            </table>
+
+            <div class="row align-items-center mt-3">
+                <div class="col-auto">
+                    <button class="btn btn-primary" id="sort-button">Sort</button>
+                </div>
+
+                <div class="col-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><button class="dropdown-item" id="sort-by-id">#</button></li>
+                            <li><button class="dropdown-item" id="sort-by-title">Title</button></li>
+                            <li><button class="dropdown-item" id="sort-by-date">Created at</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Order
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><button class="dropdown-item" id="order-asc">Ascending</button></li>
+                            <li><button class="dropdown-item" id="order-desc">Descending</button></li>
+                            <li><button class="dropdown-item" id="order-abc">Alphabetic</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/jquery/jquery.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/posts.js"></script>
+    </body>
+</html>

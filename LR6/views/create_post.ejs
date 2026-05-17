@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <title>Create New Post</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <%- include("partials/navbar.ejs") %>
+
+        <h1 class="my-4">Create New Post</h1>
+
+        <form method="post" action="/posts/create">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Enter post title" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="category" class="form-select" id="category" required>
+                    <option value="" selected disabled>Choose a category...</option>
+                    <option value="technology">Technology</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="travel">Travel</option>
+                    <option value="education">Education</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="body" class="form-label">Body</label>
+                <textarea name="body" class="form-control" id="body" rows="6" placeholder="Write your post content here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Publish Post</button>
+            <a href="/posts" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

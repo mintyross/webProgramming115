@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Send feedback about My Sinister Blog">
+        <title>Feedback - My Sinister Blog</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mobile.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/darth-vader.jpg" alt="Darth Vader header background" width="150" height="150">
+            <h1>My Sinister Blog</h1>
+        </header>
+
+        <nav class="topNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="search.html">Search</a>
+        </nav>
+
+        <main>
+            <section class="form-container">
+                <h1>Feedback</h1>
+                <form action="/feedback" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" class="form-input" min="0" max="150">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-input">
+                            <option value="">Select an option</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="form-fieldset">
+                        <legend>Rate This Blog</legend>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" id="rate0" name="rate" value="a2d2" required>
+                                <label for="rate0">A2D2 Droid</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="rate1" name="rate" value="stormtrooper" required>
+                                <label for="rate1">Storm Trooper</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="rate2" name="rate" value="purgetrooper" required>
+                                <label for="rate2">Purge Trooper</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="rate3" name="rate" value="inquisitor" checked required>
+                                <label for="rate3">Inquisitor</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="feedback">Feedback</label>
+                        <textarea id="feedback" name="feedback" class="form-textarea" placeholder="Write your report" required></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="emailBack" name="emailBack">
+                        <label for="emailBack">Email me back with answer</label>
+                    </div>
+
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            &copy; K105 KhAI
+            <nav aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="signin.html">Sign in</a>
+                <a href="signup.html">Sign up</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="search.html">Search</a>
+            </nav>
+        </footer>
+    </body>
+</html>
